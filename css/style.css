@@ -25,6 +25,12 @@ Azul_texto_igual_logo_css:#142F67
 Gris_obscuro_boton_login:#606468
 http://www.virtualnauta.com/html-etiqueta-input
 */
+.cambios-para-git{
+  width: 100%;
+  float: left;
+  background: gray;
+  padding: 1%;
+}
 
 /*!!!!!!!!!!!!!--Fuentes_Utilizadas--!!!!!!!!!!!!!*/
 @font-face { 

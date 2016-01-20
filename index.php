@@ -132,6 +132,7 @@ if ( isset($_SESSION['username']) && isset($_SESSION['userid']) && $_SESSION['us
 <img id="img-bienv" src="img/bienvenido.gif">
 <div class="clearfix"></div>
 <img id="img-bienv-logo" src="img/logo.gif" >
+<div class="cambios-para-git">Es un div para hacer cambios</div>
 
  </div>
  </div>
