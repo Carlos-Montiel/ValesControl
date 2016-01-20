@@ -1,0 +1,70 @@
+#NewBoxAlertBox-Box {
+  padding-bottom: 24px;
+  background: url('../img/bg-box-bottom.png') bottom left no-repeat !important;
+  background: url('../img/bg-box-bottom.gif') bottom left no-repeat;
+}
+
+#NewBoxAlertBox-InBox {
+  padding-top: 15px;
+  background: url('../img/bg-box-top.png') top left no-repeat !important;	
+  background: url('../img/bg-box-top.gif') top left no-repeat;	
+}
+
+#NewBoxAlertBox-BoxContent {
+  background: url('../img/bg-box-body.png') top left repeat-y !important;
+  background: url('../img/bg-box-body.gif') top left repeat-y;
+  padding: 0px 20px;
+}
+
+#NewBoxAlertBox-BoxContenedor {
+  padding: 0px 0px 5px 40px;
+  text-align: left;
+  font-family:'fuente_1';
+  font-size:16px;
+  text-align: center;
+  font-weight: bold;
+  color:#000;
+}
+
+#NewBoxAlertBox-BoxContenedor h1,#NewBoxAlertBox-BoxContenedor h2,#NewBoxAlertBox-BoxContenedor h3,#NewBoxAlertBox-BoxContenedor b,#NewBoxAlertBox-BoxContenedor strong{
+  text-align: left;
+  font-family:'fuente_1';
+  text-align: center;
+  font-size:16px;
+  color:#000;
+  font-weight:bold;
+  margin:0px;
+  padding:0px;
+}
+
+#NewBoxAlertBox-Buttons{
+  text-align:center;
+}
+
+#NewBoxAlertBox-Buttons input {
+  margin: 10px 10px;
+}
+
+#NewBoxAlertBox-BoxContenedor #BoxPromptInput{
+  margin-top:5px;
+}
+
+#NewBoxAlertBox-Box .BoxAlert {
+  background: url('../img/dialog-warning.png') top left no-repeat;
+}
+
+#NewBoxAlertBox-Box .BoxConfirm {
+  background: url('../img/dialog-help.png') top left no-repeat;
+}
+
+#NewBoxAlertBox-Box .BoxPrompt {
+  background: url('../img/dialog-help.png') top left no-repeat;
+}
+
+#NewBoxAlertBox-Box .BoxInfo {
+  background: url('../img/dialog-information.png') top left no-repeat;
+}
+
+#NewBoxAlertBox-Box .BoxError {
+  background: url('../img/dialog-error.png') top left no-repeat;
+}

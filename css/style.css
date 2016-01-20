@@ -1,0 +1,2174 @@
+/*
+ _________________
+|                                            
+|      ºººººº
+|     º     ºº
+|     º
+|     º     ºº
+|      ºººººº  
+|_________________
+
+*/
+/*-----Colores para referencia------*/
+/*
+Blanco:#ffffff
+Negro:#000000
+Rojo_titulos:#961717
+Gris_borde_obscuro:#7D7D7D
+Sombra_menu_gris_claro:#999
+Menu_degradado_color1_claro_obscuro:#E2E2E2
+Menu_degradado_color2_claro:#EDEDEA
+Gris_menu_activo_claro:#DDDDDD
+Gris_claro_del_titulo_de_entrar:#fff
+Color_borde_triangulos_lazo:#222
+Azul_texto_igual_logo_css:#142F67
+Gris_obscuro_boton_login:#606468
+http://www.virtualnauta.com/html-etiqueta-input
+*/
+
+/*!!!!!!!!!!!!!--Fuentes_Utilizadas--!!!!!!!!!!!!!*/
+@font-face { 
+/*--Papyrus--*/
+font-family: 'fuente_1'; 
+src: url('../font/papyrus.eot'); 
+src: url('../font/papyrus.eot?#iefix') format('embedded-opentype'), 
+url('./font/papyrus.svg#CrimsonRoman') 
+format('svg'), url('../font/papyrus.woff') 
+format('woff'), url('../font/papyrus.ttf') 
+format('truetype'); 
+}
+ 
+/*<<<<<<<<<<<<<<<<<<<<<<<<-----Cuerpo:----->>>>>>>>>>>>>>>>>>>>*/
+
+/*<<--Para Boton derecho-->>*/
+#cargando {
+width:50%;
+position: absolute;
+margin: 25% 25%;
+}
+
+#content{
+width: 100%;
+float: left;
+}
+
+body{/*cuerpo fondo y posicion*/
+
+}
+
+#all{/*capa principal que contiene todo*/
+	width: 950px;
+	margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  background:url(../img/back1.png);
+  background-attachment: fixed;
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  -ms-border-radius: 8px 8px 8px 8px;
+  -o-border-radius: 8px 8px 8px 8px;
+   box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+
+}
+
+header{/*Encabezado*/
+         background: url(../img/back3.png);
+         width: 100%;
+         border-radius: 8px 8px 0 0;
+         -moz-border-radius: 8px 8px 0px 0px;
+         -webkit-border-radius: 8px 8px 0px 0px;
+         -ms-border-radius: 8px 8px 0px 0px;
+         -o-border-radius: 8px 8px 0px 0px;
+}
+
+header img{/*imagen logo*/
+         width: 283px;
+         height: 175px;
+         cursor: pointer;
+}
+
+#logo{/*capa que contiene la imagen del logo*/
+	  float:left;
+    margin: 2% 0% 0% 3%;
+    width: 30%;
+}
+
+#cont-der{ /*capa Contiene logo ssh hgroup (h1 y h2) y el menu nav*/
+	float: left;
+	padding-top: 0;
+  width: 64%;
+}
+
+#info_sesion{
+  margin: 2% 1% 2% 0;
+  float: right;
+  font: 14px 'fuente_1' red;
+  font-weight: bold;
+  letter-spacing: 3px;
+  width: 166px;
+  height: 22px;
+}
+
+#sesion{
+  width: 100%;
+  height: 100%;
+}
+
+#ctrue{/*<<--texto de sesion Iniciada-->>*/
+
+}
+
+#cfalse{
+
+}
+
+#logo_ssh{
+  float: left;
+  width: 15%;
+  margin: 1% 1% 0% 3%;
+}
+
+#logo_ssh img{
+  width: 100%;
+  height: 100%;
+}
+
+hgroup{/*Contiene los titulos h1 y h2*/
+    font-family: 'fuente_1';
+    color: #57575B;
+    letter-spacing : .01em;
+    line-height: .7em;
+    float: left;
+    width: 80%;
+}
+
+ #fecha{/*Capa que contiene la fecha*/
+ 	float:right;
+ 	padding: 1% 4% 1% 0 ;
+ 	font-family: 'fuente_1';
+  color: #3A0700;
+  letter-spacing : .01em;
+  line-height: .7em;
+}
+
+.timer{
+left: 25%;
+right: 25%;
+top: 45%;
+bottom: 25%;
+    width: 50%;
+    height: 30%;
+    background-image: url('../img/load_lines.gif');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    position: fixed;
+    display: none;
+    z-index: 9999;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<-----Menu------>>>>>>>>>>>>>>>>>>>>>>>>*/
+nav{/*--caja que contiene el menu--*/
+   float: left;
+   margin-left:3%;
+   margin-top: 1%;
+   width: 100%;
+   height: 36px;
+}
+
+nav ul {/*lista en general*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {/*cada elemento de la lista*/
+  float: left;
+  box-shadow: 3px 3px 6px #999;
+  -webkit-box-shadow:0 0px 10px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 10px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 10px #777, 0 0 20px #CCC inset;
+  /* Colores degradados para el menu cundo esta inactivo*/
+  /* compatible con chrome y safari*/
+  background: white;
+  
+behavior: url('htc/pie.htc');
+}
+
+nav ul li a {/*cada enlace de la lista*/
+  display: block;
+  float: left;
+  padding: 6px 20px;
+  border-right: 1px solid #7D7D7D;
+  border-left: 1px solid #7D7D7D;
+  color: #000000;
+  font: 13px 'fuente_1' ;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+ 
+nav ul li:first-child a {/*primer elemento (enlace) de la lista*/
+    border-left:none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -moz-border-top-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    behavior: url('pie.htc');
+}
+ 
+nav ul li:last-child a {/*ultimo elemento (enlace) de la lista*/
+    border-right:none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -moz-border-top-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+        behavior: url('pie.htc');
+
+}
+ 
+nav ul li:first-child {/*primer elemento de la lista*/
+  /* para redondear bordes */
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-bottom-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+      behavior: url('pie.htc');
+}
+ 
+nav ul li:last-child {/*ultimo elemento de la lista*/
+  /*bordes redondeados*/
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-bottom-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+      behavior: url('pie.htc');
+}
+
+/*-----Menu pulsado y activo------*/
+nav ul li:hover {/*menu pulsado*/
+  /*degradados de botones cuando esta pulsado*/
+  /*para chrome y safari*/
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EDEDEA), color-stop(0.5, #424242), color-stop(0.5, #383838), color-stop(1, #EDEDEA));
+  background-image: -webkit-linear-gradient(top, #EDEDEA, #E2E2E2 50%, #E2E2E2 50%, #EDEDEA);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #EDEDEA, #E2E2E2 50%, #E2E2E2 50%, #EDEDEA);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #EDEDEA, #E2E2E2 50%, #E2E2E2 50%, #EDEDEA);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #EDEDEA, #E2E2E2 50%, #E2E2E2 50%, #EDEDEA);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #EDEDEA, #E2E2E2 50%, #E2E2E2 50%, #EDEDEA);
+  /*no sirve en IE pasado*/
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+    behavior: url('pie.htc');
+}
+ 
+nav ul li:active { /*color de botones activo*/
+  background: #DDDDDD;
+}
+ 
+nav ul li:hover a,
+nav ul li:active a {/*bordes de botones al seleccionar y pulsar*/
+  border-left-color: transparent;
+  border-right-color: transparent;
+
+}
+
+/*<<<<<<<<<<<<<<---------Termina Menu------------->>>>>>>>>>>>>>*/
+
+#msjs{/*capa para mostrar mensajes de validaciones y otras cosas*/
+width:50%;
+height: 4%;
+background: url('../img/red.png');
+position: fixed;
+z-index: 9999999;
+font-size: 14px;
+color: white;
+font-family: 'fuente_1';
+text-align: center;
+font-weight: bold;
+letter-spacing: 2px;
+margin: 1% 25% 0 22%;
+display: none;
+border-radius: 3px 3px 3px 3px;
+-moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -ms-border-radius: 3px 3px 3px 3px;
+  -o-border-radius: 3px 3px 3px 3px;
+
+}
+
+
+
+.clearfix:after {/*Capa que separa y limpia los floats*/
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+/*<<<<<<<<-Formato de los segundos menus->>>>>>>*/
+.menus-principal{/*<<--Capa principal-->>*/
+  width: 100%;
+  float: left;
+  margin: 2% auto;
+}
+
+.titulo-menu{
+text-align: center;
+font: 24px 'fuente_1';
+font-weight: bold;
+}
+
+.menus{/*<<--Capa pa los menus-->>*/
+float: left;
+width: 90%;
+font: 16px 'fuente_1';
+text-align: center;
+margin: auto 5%;
+}
+
+.menus-contenido{/*<<--pa meter el contenido-->>*/
+float: left;
+width: 100%;
+}
+
+
+.menus a{/*<<---->>*/
+text-decoration: none;
+color: #606468;
+font-weight: bold;
+}
+
+.menus a:hover{
+color:green;
+}
+
+.menus .relleno a:hover{
+color:#2162AF;
+}
+
+.menus a:active{
+color:#000000;
+}
+
+/*<<<<<<<<<<<<<<<<<<<--Capa de Bienvenida-->>>>>>>>>>>>>>>>>>*/
+
+#bienvenida{
+  width: 90%;
+  float: left;
+  margin: 5% 5% 2%;
+
+}
+
+.titulos2{
+  text-align: center;
+  font: 50px 'fuente_1';
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+#img-bienv{
+width: 50%;
+float: left;
+margin: auto 25%;
+cursor:pointer;
+}
+
+#img-bienv-logo{
+  width: 50%;
+float: left;
+margin: 2% 25%;
+cursor: pointer;
+}
+
+/*<<<<<<<<<<<<<<<<---cintas de separacion y titulos---->>>>>>>>>>>>>>>>>>*/
+
+#lazo-entrar{/*>--Titulo de entrar del login--<*/
+    background:url(../img/ar1.jpg);;
+    color:#fff;
+    text-shadow: -3px -3px 3px #000000;
+    -moz-text-shadow: -3px -3px 3px #000000;
+    -webkit-text-shadow: -3px -3px 3px #000000;
+    -o-text-shadow: -3px -3px 3px #000000;
+    behavior: url('pie.htc'); 
+
+}
+
+#lazo-enc, #lazo-pie{/*--cintas para separar encabezzado y pie de pagina--*/
+  background: url(../img/ar1.jpg);
+  
+}
+
+#lazo{/*>>--Capa del login a la que envuelve la cinta--<<*/
+  width: 50%;
+  position: relative;
+  background: white;
+  margin: 30px auto;
+  padding-top: 30px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -ms-border-radius: 3px 3px 3px 3px;
+  -o-border-radius: 3px 3px 3px 3px;
+     /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111')";
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111');     
+}
+
+.lazo-span{/*<<--h1 que se usa para hacer la cinta-->>*/
+  margin: 0 -10px;
+  text-align: center;
+  position: relative;
+  color: white;
+  font-family: 'fuente_1';
+  padding: 7px 0;
+  border: none;
+  box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+}
+
+.lazo-span:before, .lazo-span:after{/*<<--para hacer los triangulos antes y despues del h1-->>*/
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  bottom: -10px;
+}
+
+.lazo-span:before{/*hacer el triangulo antes del h1*/
+  border-width: 0 10px 10px 0;
+  border-right-color: #222;
+  left: 0;
+}
+
+.lazo-span:after{/*hacer el triangulo despues del h1*/
+  border-width: 0 0 10px 10px;
+  border-left-color: #222;
+  right: 0;
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<--Login-->>>>>>>>>>>>>>>>>>>>>*/
+
+.box-info, .box-success, .box-alert, .box-error{
+    clear: both;
+    text-align: center;
+    font-weight: bold;
+}
+.box-info {
+    color: #00529b;
+}
+.box-success {
+    color: #4f8a10;
+}
+.box-alert {
+    color: #9f6000;
+}
+.box-error {
+    color: #d8000c;
+}
+
+
+/*<<--Efectos de sombra-->>*/
+.efecto3
+{
+                position:relative;      
+                -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+}
+
+.efecto2{
+  position: relative;
+}
+.efecto2:before, .efecto2:after
+{
+/* Posiciona la sobora por detras del color de la caja*/
+                  z-index: -1;
+                  position: absolute;
+                  /* no aplico ningún contenidos HTML */
+                  content: "";
+                  /* posiciona la sombra con respecto al borde inferior, izquierdo y superior */
+                  bottom: 15px;
+                  left: 10px;
+                  top: 80%;
+                  /* configura el ancho */
+                  width: 50%;
+/* color de fondo */
+                  background: #777;
+                  /* definicion de la sombra estandar para box-shadow */
+                  -webkit-box-shadow: 0 15px 10px #777;
+                  -moz-box-shadow: 0 15px 10px #777;
+                  box-shadow: 0 15px 10px #777;
+                  /* rotacion de la sombra */
+                  -webkit-transform: rotate(-3deg);
+                  -moz-transform: rotate(-3deg);
+                  -o-transform: rotate(-3deg);
+                  -ms-transform: rotate(-3deg);
+                  transform: rotate(-3deg);
+}
+.efecto2:after
+{
+                  /* rotacion de la sombra */
+                  -webkit-transform: rotate(3deg);
+                  -moz-transform: rotate(3deg);
+                  -o-transform: rotate(3deg);
+                  -ms-transform: rotate(3deg);
+                  transform: rotate(3deg);
+                  /* posiciona la sombra con respecto al borde izquierdo y derecho */
+                  right: 10px;
+                  left: auto;
+}
+
+#msj-login{/*>>--capa que sirve para mostrar e mensaje del login (estado)--<<*/
+  margin: 5%;
+  font: 18px 'fuente_1';
+  text-align: center;
+  height: 30px;
+}
+
+#login{/*<<--Formulario para el login-->>*/
+text-align: center;
+margin: 2% 10%;
+}
+
+.text1{/*<<--texto de "administrador"-->>*/
+  letter-spacing: 4px;
+  text-align: center;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  border: none;
+  margin-bottom: 6%;
+  color: #57575B;
+  font-family: Calligraphic;
+}
+
+input{/*<<--Formato de los inputs-->>*/
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#login input[type="password"]{/*<<--Formato para los password del login-->>*/
+  background-color: white;
+  border-radius: 3px 3px 3px 3px;
+  -moz-border-radius: 3px 3px 3px 3px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  -o-border-radius: 3px 3px 3px 3px;
+  border: solid 1px #7D7D7D;
+  width: 198px;
+  height: 40px;
+}
+
+#login input[type="button"]{/*<<--Formato para el boton del login-->>*/
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  background: url(../img/back3.png);
+  color: #606468;
+  font-weight: bold;
+  margin-bottom: 2em;
+  width: 280px;
+  cursor: pointer;
+}
+
+#login input[type="button"]:hover {/*<<--Boton cuando esta el puntero sobre el-->>*/
+  background: url(../img/black4.png);
+  /*No sirve en ie pasado*/
+  color: white; 
+  border: 2px solid "#CCCCCC";
+}
+
+/**>>>>>>>>>>>>>>>>>>>>>>>>>>--Formatos Generales--<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.titulos{
+  margin: 0 -15px;
+  text-align: center;
+  position: relative;
+  color: white;
+  font-family: 'fuente_1';
+  padding: 10px 0;
+  background: url(../img/back.png);
+  text-shadow: -3px -3px 3px #999;
+  -moz-text-shadow: -3px -3px 3px #999;
+  -webkit-text-shadow: -3px -3px 3px #999;
+  -o-text-shadow: -3px -3px 3px #999;
+  -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  box-shadow:0 0px 4px #777, 0 0 20px #CCC inset; 
+   /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111')";
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#111111');      
+}
+
+.verde{
+color: green;
+}
+
+.azul{
+  color:#2162AF;
+}
+
+.amarillo{
+color:#FED93D;
+}
+
+.rojo{
+  color: #E44D26;
+}
+
+.blanco{
+  color: #ffffff;
+}
+
+#opc_reinic{
+  text-align: center;
+  float: left;
+  width: 100%;
+font: 12px 'fuente_1';
+font-weight: bold;
+  margin-bottom: 3%;
+  margin-top: -3%;
+}
+
+#opc_reinic #opc{
+  text-decoration: none;
+  cursor: pointer;
+  color: #606468;
+}
+
+#opc_reinic #opc:hover{
+  color: green;
+}
+
+#opcrein{
+  display: none;
+  width: 90%;
+  float: left;
+  margin: -3% 5% 2%;
+}
+
+#op1rc{
+ text-decoration: none;
+  cursor: pointer;
+  color: #2162AF;
+}
+#op1rc:hover{
+
+  color: red;
+}
+
+
+#op1rcc{
+  text-align: center;
+  float: left;
+  width: 100%;
+font: 12px 'fuente_1';
+font-weight: bold;
+}
+
+#ind{
+  text-align: justify;
+  float: left;
+  width: 30%;
+  margin: 0% 35% ;
+
+}
+
+#op2rcc{
+  text-align: center;
+  float: left;
+  width: 100%;
+font: 12px 'fuente_1';
+font-weight: bold;
+  color: #7F6E1D;
+}
+
+#label_tablas{
+  width: 5%;
+  margin-left: 35%;
+}
+
+#tablas{
+  margin-left: 35%;
+ width: 30%;
+ text-align: center;
+}
+
+#met{
+  float: left;
+  width: 40%;
+  text-align: center;
+  font-weight: bold;
+  margin: 1% 30%;
+}
+/*>>>>>>>>>>>>>>>>>>>>>>>>>--Recibo--<<<<<<<<<<<<<<<<<<<<<<*/
+
+#insertar_recibo{/*<<--Capa principal de insertar recibo contiene todas las demas-->>*/
+  display: block;
+  margin: 0% auto 3%;
+  background: url(../img/back1.png);
+  width: 90%;
+  box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+}
+
+#capa_recibo{/*<<--capa que contiene el recibo-->>*/
+float: left;
+margin: 1% 5%;
+border: 1px solid #999;
+width: 90%;
+background: white;
+position: relative;
+}
+
+#recibo_dentro{/*>>--Capa dentro del recibo--<<*/
+  margin: 3%;
+  width: 94%;
+  height: 94%;
+}
+
+#mesag{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#enc_recibo{/*<<--encabezado del recibo contiene el logo y el texto-->>*/
+  width: 100%;
+  padding-bottom:2%; 
+}
+
+#txt_enc{/*<<--texto del encabezado-->>*/
+float: left;
+text-align: center;
+margin: auto;
+width: 50%;
+font: 13px Arial;
+margin-left: 15%;
+}
+
+#img_enc{/*<<--capa imagen del encabezado-->>*/
+  float: left;
+  width: 73px;
+  height: 73px;
+}
+
+#img_enc img{/*>>--imagen del encabezado--<<*/
+width: 100%;
+height: 100%;
+cursor: pointer;
+}
+
+#capa_form_recibo{/*<<--capa quer contiene el formulario-->>*/
+float: left;
+width: 100%;
+font: 11px Arial;
+letter-spacing: 1px;
+padding-right: 0;
+}
+
+#capa_form_recibo input, .inputs input{/*<<--para darle formato a los inputs-->>*/
+height: 14px;
+font: 10px Arial;
+margin: 1px 0;
+text-transform: uppercase;
+}
+
+#capa_firmas_recibo{/*<<--capa para las firmas principal-->>*/
+float: left;
+width: 100%;
+text-align: center;
+font: 11px Arial;
+padding-top:2%;
+}
+
+#firma_1{/*<<--firma1-->>*/
+  float: left;
+  margin: 0 2% 0 1%;
+  width: 30%;
+}
+
+#firma_2{/*<<--firma2-->>*/
+  float: left;
+  margin: 0 2%;
+  width: 30%;
+}
+
+#firma_3{/*<<--firma3-->>*/
+  float: left;
+  margin: 0 1% 0 2%;
+  width: 30%;
+}
+
+.leftfloat{/*>>--clase para hacer el float--<<*/
+float:left;
+margin: -1px;
+}             
+
+/*<<<<<<<<<<<<<<<Para acomodar las lineas del formulario tamaño y alinearlas*/
+/*1a linea--------------*/
+
+#label_fecha{
+width: 12.5%;
+}
+
+
+#fecha_recibo{
+width: 25%;
+}
+
+#label_fecha1{
+width: 14%;
+}
+
+#label_folio{
+width: 12.5%;
+margin-left: 22%;
+}
+
+#folio_recibo{
+  width: 12.5%;
+}               /*2a linea----------*/
+
+#label_area{
+width: 30%;
+}
+
+#area_recibo{
+width: 40%;
+}              /*3 linea------------*/
+
+#label_vehiculo{
+  width: 30%;
+}
+
+#vehiculo_recibo{
+  width: 12.5%;
+}
+
+#label_noeco{
+  width: 10%;
+  text-align: center;
+}
+
+#noeco_recibo{
+  width: 12.5%;
+}
+
+#label_cilindraje{
+  width: 12.5%;
+  margin-left: 8%;
+}
+
+#cilindraje_recibo{
+  width: 12.5%;
+}                 /*4 linea------------*/
+
+#label_ofcom{
+width: 30%;
+}
+
+#ofcom_recibo{
+width: 12.5%;
+}
+
+#label_comisionadoa{
+width: 15%;
+margin-left: 16%;
+}
+
+#comisionadoa_recibo{
+  width: 25%;
+}                /*5a linea------------*/
+
+#label_recorrido{
+width: 30%;
+}
+
+#recorridoaprox_recibo{
+width: 12.5%;
+}
+
+#label_kmrecorrido{
+width: 10%;
+text-align: center;
+}               /*6a linea------------*/
+
+#label_monto{
+width: 5%;
+text-align: center;
+}
+
+#monto_recibo{
+width: 12.5%;
+}
+
+#label_montoletra{
+width: 12%;
+text-align: center;
+}
+
+#montoletra_recibo{
+width: 40%;
+}
+
+#label_litros{
+width: 12%;
+margin-left: 4%;
+}
+
+#litros_recibo{
+  width: 12.5%;
+}               
+
+#rpl_recibo{
+height: 14px;
+font: 10px Arial;
+margin: 1px 0;
+text-transform: uppercase;
+width: 5%;
+}
+
+#label_rpl{
+width: 8%;
+margin-left: 43%;
+  }/*termina lineas---------*/
+
+
+.sff{/*<<--formato para los inputs de las firmas-->>*/
+float:left;
+margin: -1px;
+height: 11px;
+font: 10px Arial;
+margin: 1px 0;
+text-transform: uppercase;
+width: 100%;
+border: none;
+}
+
+#recibo_inf{/*<<--Capa para los datos de abajo "inferior" dentro van las otras 3-->>*/
+  width: 90%;
+  margin: auto;
+  float: left;
+  margin: 1% 5%;
+}
+
+.info_vehiculo{/*>>--Para mostrar los datos del vehiculo que se selecciono-->>*/
+float: left;
+width: 48%;
+margin: 1%;
+font: 14px 'fuente_1';
+}
+
+#otros_datos_vehiculo{/*>>--capa para otros datos fuera del vehiculo--<<*/
+float: left;
+width: 50%;
+margin: 1% 25%;
+background: #ffffff;
+font: 11px Arial;
+}
+
+#label_preciogas{
+width: 100%;
+float: left;
+text-align: center;
+}
+
+#preciogas_recibo{
+width: 20%;
+float: left;
+margin-left: 40%;
+}
+
+#label_destinode{
+width: 5%;
+float: left;
+}
+
+#destinode_recibo{
+width: 93%;
+float: left;
+}
+
+#label_destinoa{
+width: 5%;
+float: left;
+}
+
+#destinoa_recibo{
+width: 93%;
+float: left;
+}
+
+#label_nomcon{
+width: 100%;
+float: left;
+text-align: center;
+}
+
+#nomcon_recibo{
+width: 90%;
+float: left;
+margin-left: 5%;
+}
+
+.respuestas_1{
+  font: 12px Arial sans-serif black;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+#opciones_insertar{/*>>--capa aqui van los botones--<<*/
+  width: 50%;
+  float: left;
+  margin: 4% 25%;
+  text-align: center;
+}
+                                    /*<<--Boton Guardar-->>*/
+.boton_guardar{
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #7EA236), color-stop(0.5, #AFD753), color-stop(0.5, #7EA236), color-stop(1, #AFD753));
+  background-image: -webkit-linear-gradient(top, #96B947, #AFD753 50%, #AFD753 50%, #96B947);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #5B6F2B, #AFD753 50%, #AFD753 50%, #5B6F2B);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #EDEDEA, #AFD753 50%, #AFD753 50%, #EDEDEA);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #EDEDEA, #AFD753 50%, #AFD753 50%, #EDEDEA);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #EDEDEA, #AFD753 50%, #AFD753 50%, #EDEDEA);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=0 ); /* IE6-9 */
+  font: 12px 'fuente_1';
+  font-weight: bold;
+   -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  margin: 1% 2% 1% 23%;
+  float: left;
+  padding: 2% 2% 1% 1%;
+  width: 22%;
+}
+
+.boton_guardar:before{
+  content: url(../img/save.png);
+  float: left;
+  font-size: 2px;
+  width: 15%;
+  margin: 1% 1% 0 6%;
+}
+
+.enlace_grdr{
+  text-decoration: none;
+  float: left;
+  width: 75%;
+  color: #606468;
+}
+
+.boton_guardar:hover{
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #AFD753), color-stop(0.5, #96B947), color-stop(0.5, #AFD753), color-stop(1, #AFD753));
+  background-image: -webkit-linear-gradient(top, #AFD753, #96B947 50%, #96B947 50%, #AFD753);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #AFD753, #96B947 50%, #96B947 50%, #AFD753);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #AFD753, #96B947 50%, #96B947 50%, #AFD753);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #AFD753, #96B947 50%, #96B947 50%, #AFD753);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #AFD753, #96B947 50%, #96B947 50%, #AFD753);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cbc0a', endColorstr='#9dd53a',GradientType=0 ); /* IE6-9 */
+  color: #142F67;
+}
+
+.enlace_grdr:hover{
+  color: #142F67;
+}
+
+                                 /*<<--Boton Imprimir-->>*/
+
+.boton_imprimir{
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D5B931), color-stop(0.5, #FED93D), color-stop(0.5, #FED93D), color-stop(1, #D5B931));
+  background-image: -webkit-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbf043', endColorstr='#e6f0a3',GradientType=0 ); /* IE6-9 */
+  font: 12px 'fuente_1';
+  font-weight: bold;
+    -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  margin: 1% 2% 1% 0%;
+  float: left;
+  padding: 2% 2% 1% 1%;
+  width: 22%;
+}
+
+.boton_imprimir:after{
+  content: url(../img/print.png);
+  float: left;
+  font-size: 2px;
+  width: 15%;
+  margin: 1% 1% 0% 0%;
+}
+
+.enlace_print{
+  text-decoration: none;
+  float: left;
+  width: 75%;
+  color: #606468;
+  margin-left: 6%;
+}
+
+.boton_imprimir:hover{
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FED93D), color-stop(0.5, #D5B931), color-stop(0.5, #D5B931), color-stop(1, #FED93D));
+  background-image: -webkit-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+}
+
+.enlace_print:hover{
+color: #142F67;
+}
+
+p .boton_guardar{
+    -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  margin: 1% 0 1% 35%;
+}
+
+#opciones_consultar{/*>>--capa aqui van los botones--<<*/
+  width: 50%;
+  float: left;
+  margin: 1% 25%;
+  text-align: center;
+}
+     
+.boton_consultar{/*<<--boton para consultar-->>*/
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2162AF), color-stop(0.5, #2772BA), color-stop(0.5, #2772BA), color-stop(1, #2162AF));
+  background-image: -webkit-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6393c1', endColorstr='#cfe7fa',GradientType=0 ); /* IE6-9 */
+  font: 12px 'fuente_1';
+  font-weight: bold;
+    -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  margin: 1% 35% 1% 34%;
+  float: left;
+  padding: 2% 4% 1% 0%;
+  width: 26%;
+}
+
+.boton_consultar:before{
+  content: url(../img/cons.png);
+  float: left;
+  font-size: 2px;
+  width: 15%;
+  margin: 1% 4% 0 6%;
+}
+
+.enlace_consultar{
+  text-decoration: none;
+  float: left;
+  width: 75%;
+  color: #000000;
+  margin-left: 0%;
+}
+
+.boton_consultar:hover{
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2772BA), color-stop(0.5, #2162AF), color-stop(0.5, #2162AF), color-stop(1, #2772BA));
+  background-image: -webkit-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
+}
+
+.enlace_consultar:hover{
+color: #142F67;
+}
+
+
+/*boton nuevo*/
+
+.boton_nuevo{/*<<--boton para consultar-->>*/
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D5B931), color-stop(0.5, #FED93D), color-stop(0.5, #FED93D), color-stop(1, #D5B931));
+  background-image: -webkit-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #D5B931, #FED93D 50%, #FED93D 50%, #D5B931);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbf043', endColorstr='#e6f0a3',GradientType=0 ); /* IE6-9 */
+  font: 12px 'fuente_1';
+  font-weight: bold;
+    -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+ margin: 1% 2% 1% 0%;
+  float: left;
+  padding: 2% 4% 1% 0%;
+  width: 22%;
+}
+
+.boton_nuevo:before{
+  content: url(../img/cons.png);
+  float: left;
+  font-size: 2px;
+  width: 15%;
+  margin: 1% 4% 0 6%;
+}
+
+.enlace_nuevo{
+  text-decoration: none;
+  float: left;
+  width: 75%;
+  color: #606468;
+  margin-left: 0%;
+}
+
+.boton_nuevo:hover{
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FED93D), color-stop(0.5, #D5B931), color-stop(0.5, #D5B931), color-stop(1, #FED93D));
+  background-image: -webkit-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #FED93D, #D5B931 50%, #D5B931 50%, #FED93D);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=0 ); /* IE6-9 */
+}
+
+.enlace_nuevo:hover{
+color: #142F67;
+}
+
+                                    /*<<--Boton eliminar-->>*/
+.boton_eliminar{
+  background:white;
+  font: 12px 'fuente_1';
+  font-weight: bold;
+   -webkit-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                -moz-box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+                box-shadow:0 0px 4px #777, 0 0 20px #CCC inset;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  margin: 1% 2% 1% 34%;
+  float: left;
+  padding: 2% 2% 1% 1%;
+  width: 25%;
+}
+
+.boton_eliminar:before{
+  content: url(../img/elim.png);
+  float: left;
+  font-size: 2px;
+  width: 15%;
+  margin: 1% 1% 0 6%;
+}
+
+.enlace_eliminar{
+  text-decoration: none;
+  float: left;
+  width: 75%;
+  color: #BF0E0E;
+  margin-left: 3%;
+}
+
+.boton_eliminar:hover{
+  background:#9B5859;
+  color: #142F67;
+}
+
+.enlace_eliminar:hover{
+  color: #ffffff;
+}
+
+#btn_cmbr_pssw{/*boton para cambiar contraseña*/
+margin-left: 40%;
+}
+
+
+/*botones ocultos*/
+
+
+.btns_desact{
+  display: none;
+}
+
+#opciones_insertar1{/*>>--capa aqui van los botones--<<*/
+  width: 50%;
+  float: left;
+  margin: 4% 25%;
+  text-align: center;
+}
+
+#centro_elimina{
+  text-align: center;
+  float: left;
+  width: 50%;
+  margin: 3% 25%;
+  font: 18px 'fuente_1' gray;
+}
+
+#text_av{
+  display: none;
+}
+
+#opciones_insertar2{/*>>--capa aqui van los botones--<<*/
+  width: 50%;
+  float: left;
+  margin: 4% 25%;
+  text-align: center;
+}
+
+#opciones_insertar3{/*>>--capa aqui van los botones--<<*/
+  width: 50%;
+  float: left;
+  margin: 4% 25%;
+  text-align: center;
+}
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<--insertar vehiculo-->>>>>>>>>>>>>>>>>>>>>>>*/
+
+#insertar_vehiculo{/*<<--Capa principal de insertar vehiculo contiene todas las demas-->>*/
+  display: none;
+  margin: 0% auto 3%;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+}
+
+#formulario_vehiculo{
+  margin: 3% auto 0%;
+  width: 80%;
+  background: ·#ffffff;
+  text-align: center;
+  font: 12px arial;
+  letter-spacing: 1px;
+}
+
+h4{
+  font: 16px'fuente_1';
+}
+
+#formulario_vehiculo input, #formulario_vehiculo label{
+margin-top: 1%;
+font: 12px Arial ;
+text-transform: uppercase;
+}
+
+#label_noecov{
+  width: 12.5%
+}
+
+#noeco_vehiculo{
+  width: 12.5%;
+}
+
+#label_noinv{
+  width: 12.5%;
+  margin-left: 35%;
+}
+
+#noinv_vehiculo{
+  width: 25%;
+}
+
+#label_localidad{
+width: 12.5%;
+}
+
+#localidad_vehiculo{
+width: 25%;
+}
+
+#label_municipio{
+width: 12.5%;
+margin-left: 22.5%;
+}
+
+#municipio_vehiculo{
+width: 25%;
+}
+
+#label_marca{
+width: 12.5%;
+}
+
+#marca_vehiculo{
+width: 12.5%;
+}
+
+#label_tipo{
+width: 12.5%;
+margin-left: 35%;
+}
+
+#tipo_vehiculo{
+width: 12.5%;
+}
+
+#label_modelo{
+width: 12.5%;
+}
+
+#modelo_vehiculo{
+width: 12.5%;
+}
+
+#label_placas{
+width: 12.5%;
+}
+
+#placas_vehiculo{
+width:12.5%;
+}
+
+#label_noid{
+width: 25%;
+margin-left: 22.5%;
+}
+
+#noid_vehiculo{
+width: 25%;
+}
+
+#label_nomotor{
+width: 12.5%;
+}
+
+#nomotor_vehiculo{
+width: 25%;
+}
+
+#label_nocilintros{
+width: 12.5%;
+margin-left: 35%;
+}
+
+#nocilintros_vehiculo{
+width: 12.5%;
+margin-top: 1%;
+}
+
+#label_aseguradora{
+width: 12.5%;
+}
+
+#aseguradora_vehiculo{
+width: 25%;
+}
+
+#label_poliza{
+width: 12.5%;
+margin-left: 22.5%;
+}
+
+#poliza_vehiculo{
+width: 25%;
+}
+
+#label_exped{
+width: 12.5%;
+}
+
+#exped_vehiculo{
+width: 25%;
+}
+
+#label_fecha11{
+width: 22.5%;
+text-align: center;
+}
+
+#label_vigencia{
+width: 12.5%;
+}
+
+#vigencia_vehiculo{
+width:25%;
+}
+
+#label_verificacion{
+width:12.5%;
+}
+
+#verificacion_vehiculo{
+width: 25%;
+}
+
+#label_tiposerv{
+width: 12.5%;
+}
+
+#tiposerv_vehiculo{
+width: 25%;
+}
+
+#label_edofisico{
+width: 12.5%;
+margin-left: 22.5%;
+}
+
+#edofisico_vehiculo{
+width: 25%;
+}
+
+#mstrats{
+  float: left;
+  margin-left: 12.5%;
+  font-weight: bold;
+  width: 25%;
+}
+
+#label_km{
+width: 12.5%;
+}
+
+#km_vehiculo{
+width: 12.5%;
+}
+
+#label_renl{
+width: 12.5%;
+margin-left: 35%;
+}
+
+#renl_vehiculo{
+width: 12.5%;
+}
+
+/*<<--capas de consultar-->>*/
+
+#resultado_consulta_reporte{
+  width: 80%;
+  margin:5% 10%;
+  font-size: 14px;
+  border: 1px solid #399EB3;
+  border-top: none;
+  padding: 2% 0 2%;
+  background: white;
+}
+
+#resultado_consulta_reporte-dentro{
+  width: 100%;
+float: left;
+  padding: 2% 0 2%;
+}
+
+#disenio_hoja{
+  width: 100%;
+  height: 50px;
+  float: left;
+  margin-top: -7%;
+}
+
+.titulo-cons{
+  font-size: 18px;
+  padding: 0 0 2% 0;
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-family: 'fuente_1';
+}
+
+.encc{
+  width:45%;
+  float: left;
+  text-align: left;
+font-weight: bold;
+color: #57575B;
+margin-left: 13%;
+}
+
+.encc1{
+  width:30%;
+  margin-left: 3%;
+  float: left;
+  text-align: left;
+}
+
+#consultar_reporte{/*<<--Capa principal contiene todas las demas-->>*/
+  margin: 0% auto 3%;
+  display: block;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+
+}
+
+/*consulta de vales*/
+#resultado_consulta_vale{
+  width: 80%;
+  margin:5% 10%;
+  font-size: 14px;
+  border: 1px solid #399EB3;
+  border-top: none;
+  padding: 2% 0 2%;
+  background: white;
+}
+
+
+#resultado_consulta_vale-dentro{
+  width: 100%;
+float: left;
+  padding: 2% 0 2%;
+}
+
+
+/*consulta de vehiculos*/
+#resultado_consulta_vehiculo{
+  width: 80%;
+  margin:5% 10%;
+  font-size: 14px;
+  border: 1px solid #399EB3;
+  border-top: none;
+  padding: 2% 0 2%;
+  background: white;
+}
+
+
+#resultado_consulta_vehiculo-dentro{
+  width: 100%;
+float: left;
+  padding: 2% 0 2%;
+}
+
+
+/**/
+
+#label_frc{
+  width: 15%;
+
+}
+
+#folio_rep_cons{
+  width: 13%;
+}
+
+#consultar_recibo{/*<<--Capa principal contiene todas las demas-->>*/
+  display: none;
+  margin: 0% auto 3%;
+  padding-bottom: 1%;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+
+}
+
+#label_anioc{
+width: 17%;
+text-align: left;
+}
+
+#anio_consulta{
+width: 12.5%;
+}
+
+#label_fc{
+width: 17%;
+text-align: left;
+}
+
+#folio_consulta{
+width: 12.5%;
+}
+
+#consultar_vale{/*<<--Capa principal contiene todas las demas-->>*/
+  display: none;
+  margin: 0% auto 3%;
+  padding-bottom: 1%;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+
+}
+
+#label_nvc{
+width: 20%;
+}
+
+#novale_cons{
+width:12.5%;
+}
+
+#label_aniocv{
+  width: 20%;
+}
+
+#anio_consulta_vale{
+width: 12.5%;
+}
+
+#consultar_vehiculo{/*<<--Capa principal contiene todas las demas-->>*/
+  display: none;
+  margin: 0% auto 3%;
+  padding-bottom: 1%;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+}
+
+#label_nvehc{
+width: 20%;
+}
+
+#novehiculo_cons{
+width: 12.5%;
+}
+
+.tabla_consulta{
+  float: left;
+  width: 90%;
+  height: 150px;
+  overflow: scroll;
+  margin: 2% 5%;
+}
+
+.consulta{
+  text-align: center;
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+table
+{
+    font-size: 0.9em;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow:black 1px 1px 5px;
+    border-collapse: collapse;
+    border-spacing: 0;
+     /* hack IE8 */
+    border-collapse: collapse \0/;
+    border-right: 2px inset #D3D3D3 \0/;
+    border-bottom: 2px inset #D3D3D3 \0/;
+     /* hack IE7 */
+    *border-collapse: collapse;
+    *border-right: 2px inset #D3D3D3;
+    *border-bottom: 2px inset #D3D3D3;
+
+}
+table tr th{
+    background: url(../img/pattern.png);
+    cursor: pointer;
+}
+
+table tr th{
+    background: url(../img/pattern.png);
+    cursor: pointer;
+}
+
+
+.modificar_v{
+  border: none;
+  float: left;
+  margin-left: 2%;
+width: 33%;
+text-align: left;
+}
+.enc_cv{
+width: 35%;
+float: left;
+text-align: left;
+margin-left:15%; 
+font-weight: bold;
+color: #57575B;
+}
+
+#nota_veh{
+  width: 80%;
+  float: left;
+  margin: 2% 10%;
+  font: 14px 'fuente_1';
+  color: #57575B;
+}
+.editd{
+  background: url(../img/edit2.png);
+  float: left;
+  width: 3%;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/*<<<<<<<<<<<<<<<<<<--Realizar Reportes-->>>>>>>>>>>>>>>>>>>>>>*/
+
+#realizar_reporte{/*<<--Capa principal contiene todas las demas-->>*/
+  margin: -2% auto 4%;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+  padding: 2% 0;
+}
+
+#label_repveh{
+width: 12.5%;
+}
+
+#novehiculo_rep{
+width: 12.5%;
+}
+
+#label_mesrep{
+width: 12.5%;
+margin-left: 37.5%;
+}
+#mes_fv{
+width: 25%;
+}
+
+#label_aniorep{
+  margin-left:74%;
+width: 12.5%;
+}
+#anio_fv{
+width: 12.5%;
+
+}
+
+#muestra_repimp{
+margin:0 1% 0 1%;
+width: 98%;
+float: left;
+}
+
+#obs{
+  float: left;
+  width: 100%;
+}
+
+#factura_rep{
+  width: 15%;
+}
+
+#label_facturarep{
+  width: 12.5%;
+}
+
+#gr{
+width: 40%;
+margin-left: 28%;
+}
+
+#bloquea{
+  position: absolute;
+  width: 90%;
+  height:170px;
+display: none;
+margin-top: -25px;
+}
+
+#catalogoUT{
+  display: none;
+  margin: -2% auto 4%;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+  padding: 2% 0;
+}
+
+#imprimirReciboss{
+  display: none;
+  margin: -2% auto 4%;
+background: url(../img/back1.png);
+ box-shadow: 0px 5px 6px #999;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+  width: 90%;
+  padding: 2% 0;
+}
+
+/*catalogo de unidades de transporte*/
+#label_elaborocut{
+width: 15%;
+
+}
+
+#elaborocut{
+width: 50%;
+text-align: left;
+}
+
+#label_mesmr{
+width: 12.5%;
+
+}
+#mes_mr{
+width: 25%;
+margin-top: 1%;
+}
+
+#label_aniomr{
+  margin-left:5%;
+width: 12.5%;
+
+}
+
+#anio_mr{
+width: 12.5%;
+
+}
+/*<<--Cambiar Contraseña-->>*/
+
+#cont_cmbr_pss{/*<<--Div del formulario-->>*/
+margin: 0 10%;
+width: 80%;
+font: 16px 'fuente_1';
+float: left;
+text-align: right;
+}
+
+#btn_cmbr{
+  text-align: center;
+  float: left;
+  width: 80%;
+  margin: 0% 10% 3%;
+}
+
+#btn_cmbr input[type="submit"]{
+width: 25%;
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2162AF), color-stop(0.5, #2772BA), color-stop(0.5, #2772BA), color-stop(1, #2162AF));
+  background-image: -webkit-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #2162AF, #2772BA 50%, #2772BA 50%, #2162AF);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6393c1', endColorstr='#cfe7fa',GradientType=0 ); /* IE6-9 */
+  font: 12px 'fuente_1';
+  font-weight: bold;
+  box-shadow: 3px 3px 5px #999;
+  -moz-box-shadow: 3px 3px 5px #999;
+  -webkit-box-shadow: 3px 3px 5px #999;
+  -o-box-shadow: 3px 3px 5px #999;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px 5px;
+  padding: 2% 0% 1% 0%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#btn_cmbr input[type="submit"]:hover{
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2772BA), color-stop(0.5, #2162AF), color-stop(0.5, #2162AF), color-stop(1, #2772BA));
+  background-image: -webkit-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*para firefox*/
+  background-image: -moz-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*para ie reciente*/
+  background-image: -ms-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*para opera*/
+  background-image: -o-linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+  /*segun w3c*/
+  background-image: linear-gradient(top, #2772BA, #2162AF 50%, #2162AF 50%, #2772BA);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
+
+}
+
+/*<<--Ayuda-->>*/
+
+#ayuda{
+  float: left;
+  width: 90%;
+  margin: 5%;
+  display: none;
+}
+
+#pdfayuda{
+  float: left;
+  width: 100%;
+  -webkit-box-shadow: 0px 5px 6px #999;
+  -moz-box-shadow: 0px 5px 6px #999;
+  progid:DXImageTransform.Microsoft.Shadow(color='#999', Direction=120, Strength=3);
+}
+
+/*<<<<<<<<<<<<<<<<<<--Pie de pagina-->>>>>>>>>>>>>>>>>>>>>>*/
+
+footer{/*caja pie de pagina*/
+  width: 100%;
+  -moz-border-radius: 0px 0px 3px 3px;
+  -webkit-border-radius: 0px 0px 3px 3px;
+  -ms-border-radius: 0px 0px 3px 3px;
+  -o-border-radius: 0px 0px 3px 3px;
+  background: url(../img/back3.png);
+}
+
+#l_izq{
+float: left;
+width: 10%;
+margin: 3% 0 0 10%;
+-ms-transform:rotate(10deg);
+    -webkit-transform:rotate(10deg);
+    transform: rotate(10deg);
+}
+
+#l_izq img{
+
+width: 100%;
+
+}
+
+#l_der{
+float: right;
+width: 10%;
+margin: 3% 10% 0 0%;
+-ms-transform:rotate(-10deg);
+    -webkit-transform:rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+#l_der img{
+
+width: 100%;
+
+}
+
+
+.texto_pie_1{/*<<--Texto del pie de pagina-->>*/
+  font: 12px 'fuente_1';
+  text-align: center;
+  width: 60%;
+  float: left;
+}
+
+
+
+/*><<<<<<<<<<<<<<<<<<<<<<--Logos del pie de pagina-->>>>>>>>>>>>>>>>>>*/
+
+#logos_pie{/*<<--Capa que contiene todos-->>*/
+  width: 30%;
+ margin: 5% 35% 0;
+}
+
+#logo_html{/*<<--Capa para el logo de html-->>*/
+float: left;
+width: 20%;
+padding-left:.5%; 
+margin-top: -2%;
+}
+
+#logo_js{/*<<--Capa para el logo de javascript-->>*/
+float: left;
+width: 20%;
+margin: 0 19.5%;
+}
+
+#logo_css{/*<<--Capa para el logo de css-->>*/
+float: left;
+width: 20%;
+ margin-top: -3%;
+}
+
+#logo_css img{/*<<--Imagen logo css-->>*/
+  width: 100%;
+  cursor: pointer;
+}
+
+#logo_html img{/*<<--Imagen logo html-->>*/
+  width: 90%;
+  cursor: pointer;
+}
+
+#logo_js img{/*<<--Imagen logo de js-->>*/
+  width: 90%;
+  cursor: pointer;
+}
